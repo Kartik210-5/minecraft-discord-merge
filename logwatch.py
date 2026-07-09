@@ -8,7 +8,7 @@ async def watch_logs(bot, channel_id):
     channel = bot.get_channel(channel_id)
 
     with open(
-        "latest.log",
+        "/home/minecraft/mcserver/logs/latest.log",
         "r"
     ) as file:
 
