@@ -33,7 +33,7 @@ async def on_ready():
 async def mc(interaction: discord.Interaction, message: str):
 
     # Send message into Minecraft chat
-    command(f"say [Discord] {interaction.user.name}: {message}")
+    command(f"say {interaction.user.name}: {message}")
 
     await interaction.response.send_message(
         f"Sent message to Minecraft: {message}", ephemeral=True
