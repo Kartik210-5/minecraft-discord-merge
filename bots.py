@@ -2,8 +2,8 @@ import discord
 from discord import app_commands
 from dotenv import load_dotenv
 import os
-# import asyncio
-# from logwatch import watch_logs
+import asyncio
+from logwatch import watch_logs
 
 from minecraft import command
 
@@ -40,19 +40,19 @@ async def mc(interaction: discord.Interaction, message: str):
     )
 
 
-# @bot.event
-# async def on_ready():
+@bot.event
+async def on_ready():
 
-#     await bot.tree.sync()
+    await bot.tree.sync()
 
-#     print(f"Logged in as {bot.user}")
+    print(f"Logged in as {bot.user}")
 
-#     asyncio.create_task(
-#         watch_logs(
-#             bot,
-#             YOUR_CHANNEL_ID
-#         )
-#     )
+    asyncio.create_task(
+        watch_logs(
+            bot,
+            YOUR_CHANNEL_ID
+        )
+    )
 
 
 bot.run(TOKEN)
